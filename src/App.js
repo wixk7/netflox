@@ -4,7 +4,6 @@ import {SpeedInsights} from '@vercel/speed-insights/react'
 
 function App() {
   const [s3ImageUrl, setS3ImageUrl] = useState(null);
-
   useEffect(() => {
     const fetchImageUrl = () => {
       const params = new URLSearchParams(window.location.search);
@@ -29,6 +28,7 @@ function App() {
   return (
     <div className="App">
       <SecureViewer imageUrl={s3ImageUrl} />
+      <SpeedInsights></SpeedInsights>
     </div>
   );
 }
